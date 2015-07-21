@@ -1,6 +1,39 @@
+body{
+	background: url('../img/heroes-background.jpg') no-repeat;
+	background-size: cover;
+}
+
 .item{
-	border-right:1px solid #000;
-	border-bottom:1px solid #000;
+	/*background: url('../img/hero-placeholder.jpg') no-repeat;	*/
+	border: 2px solid #000;
+
+	&--header{
+		background-color: #000;
+		height: 30px;
+		position: relative;
+
+		&:before{
+			content: ' ';
+		  	background: radial-gradient(14px at center,white,red,red);
+		  	width: 20px;
+			height: 20px;
+			border-radius: 50% 50%;
+			box-shadow: 0 0 20px rgba(255,0,0,0.8);
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			margin-left: -10px;
+			margin-top: -10px;
+			filter: blur(2px);
+		}
+	}
+
+	&--content{
+		background-color: #999;
+		height:200px;
+		background: url('../img/hero-placeholder-contentonly.jpg') no-repeat;
+		background-size: cover;
+	}
 }
 
 .ar-wrapper{
@@ -9,4 +42,14 @@
 	&.ar16-9{
 		padding-bottom: 56.25%; //16:9 aspect ratio
 	}
+}
+
+.logo{
+	max-width: 100%;
+	display: block;
+	margin: 30px auto;
+}
+
+.row{
+	padding: 15px;
 }

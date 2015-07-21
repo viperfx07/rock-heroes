@@ -88,13 +88,16 @@ module.exports = function(grunt) {
             options: {
                 map: true, // inline sourcemaps
                 processors: [
+                    require('postcss-assets')({
+                      relativeTo: 'assets/css'
+                    }),
                     require('postcss-import').postcss, //import all css inline together
                     require('autoprefixer-core').postcss, //autoprefixer
                     require('cssgrace').postcss, //add fallbacks
                     require('postcss-nested').postcss, //parse nested css like sass
                     require('postcss-mixins').postcss, //add in mixins
                     require('postcss-focus').postcss, //auto :focus,:hover styles
-                    require('postcss-simple-vars').postcss, //auto :focus,:hover styles
+                    require('postcss-simple-vars').postcss, //variable like css
                     require('csswring').postcss //minify
                 ]
             },

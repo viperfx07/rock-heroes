@@ -3,7 +3,7 @@ html(lang='en')
 	head
 		meta(charset='utf-8')
 		meta(http-equiv='X-UA-Compatible', content='IE=edge')
-		title Boilerplate
+		title Heroes
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
 		link(rel='stylesheet', href='assets/css/main.css')
@@ -16,39 +16,19 @@ html(lang='en')
 			| to improve your experience.
 		<![endif]-->
 		
-		.container
+		.container-fluid
 			.row
-				.col-sm-12
-					h1 Boilerplate
+				.col-xs-12
+					img.logo(src="assets/img/heroes-title.png", alt="Heroes")
 			.row
-				.col-md-6.col-sm-12
-					p
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-						| Officia error harum fugit, asperiores fugiat accusamus iure nemo qui culpa optio dolore aliquid, 
-						| earum itaque aspernatur. Obcaecati sunt, itaque totam cumque.
-				.col-md-6.col-sm-12
-					p
-						| Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-						| Officia error harum fugit, asperiores fugiat accusamus iure nemo qui culpa optio dolore aliquid, 
-						| earum itaque aspernatur. Obcaecati sunt, itaque totam cumque.
-			.row.v-components.splitted-image
-				.col-sm-12
-					.row.no-gutters
-						.col-md-9
-							.item
-								.ar-wrapper.ar16-9
-									img.img-responsive(src="http://placehold.it/1600x900")
-						.col-md-3
-							.row.no-gutters
-								- for(var i=0; i<3; i++){
-								.col-xs-4.col-md-12
-									.item
-										.ar-wrapper.ar16-9
-											img.img-responsive(src="http://placehold.it/800x450")
-											- if(i==2){
-											.fake-border-hide.hidden-sm.hidden-xs
-											-}
-								-}
+				- for(var i=0; i<14; i++){
+				.col-xs-12.col-sm-4.col-lg-1
+					.item
+						.item--header
+						.item--content
+				-}
+			
+
 								
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
 		script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
