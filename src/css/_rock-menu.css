@@ -1,11 +1,7 @@
 @font-face {
     font-family: MuseoSans500;
     src: url(../fonts/museosans-500-webfont.eot);
-    src: url(../fonts/museosans-500-webfont.eot) format('embedded-opentype'),
-        url(../fonts/museosans-500-webfont.eot?#iefix) format('embedded-opentype'),
-        url(../fonts/museosans-500-webfont.woff) format('woff'),
-        url(../fonts/museosans-500-webfont.ttf) format('truetype'),
-        url(../fonts/museosans-500-webfont.svg#Arkadia) format('svg')
+    src: url(../fonts/museosans-500-webfont.eot) format('embedded-opentype'), url(../fonts/museosans-500-webfont.eot?#iefix) format('embedded-opentype'), url(../fonts/museosans-500-webfont.woff) format('woff'), url(../fonts/museosans-500-webfont.ttf) format('truetype'), url(../fonts/museosans-500-webfont.svg#Arkadia) format('svg')
 }
 
 .rock-menu {
@@ -13,13 +9,11 @@
         display: none;
         float: left;
     }
-
     #responsive-menu-button {
-      font-size: 18px;
-      text-decoration: none;
-      padding: 5px;
+        font-size: 18px;
+        text-decoration: none;
+        padding: 5px;
     }
-
     &__wrapper {
         height: 36px;
         background: #6B0A0A;
@@ -74,23 +68,22 @@
             height: 36px;
         }
     }
-
     .navmenu {
-      margin: 0;
-      padding: 0;
-      border: 0;
-      font: inherit;
-      vertical-align: baseline;
-      visibility: hidden;
-      position: absolute;
-      margin-left: -40px;
-      margin-top: -10px;
-      background: url(../img/menu-bottom.png) no-repeat bottom;
-      padding-bottom: 17px;
-      z-index: 1000;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+        visibility: hidden;
+        position: absolute;
+        margin-left: -40px;
+        margin-top: -10px;
+        background: url(../img/menu-bottom.png) no-repeat bottom;
+        padding-bottom: 17px;
+        z-index: 1000;
+        width: 235px;
     }
-
-    .navtop{
+    .navtop {
         margin: 0;
         padding: 0;
         border: 0;
@@ -99,14 +92,34 @@
         height: 32px;
         background: url(../img/menu-top.png) repeat-y top;
         overflow: hidden;
+        width: 235px;
     }
-
+    .navmiddle {
+        margin: 0;
+        padding: 0 24px;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+        /*width: 187px;*/
+        background: url(../img/menu-middle.png) repeat-y;
+        overflow: hidden;
+    }
     .navsub {
+        margin: 0;
+        padding: 7px;
+        border: 0;
+        font: inherit;
+        vertical-align: baseline;
+        list-style: none;
+        background-color: #f0f0f0;
+        display: block;
+        overflow: hidden;
+        margin-bottom: 5px;
         a {
             margin: 0;
             padding: 6px 0;
             border: none;
-            font: inherit;
+            font-size: 13px;
             vertical-align: baseline;
             color: #333;
             text-decoration: none;
@@ -145,29 +158,33 @@
             &.envelope {
                 background-position: 0 -28px;
             }
-            .ministries & {
-                background: url(../img/sub-ministries-bg.png) no-repeat;
-                &.mask {
-                    background-position: 0 -60px;
-                }
-                &.cloud {
-                    background-position: 0 -31px;
-                }
-                &.slate {
-                    background-position: 0 -180px;
-                }
-                &.monitor {
-                    background-position: 0 -150px;
-                }
-                &.tune {
-                    background-position: 0 0;
-                }
-                &.mic {
-                    background-position: 0 -90px;
-                }
-                &.user {
-                    background-position: 0 -120px;
-                }
+            
+        }
+    }
+
+    .ministries .navsub {
+        .menu-item {
+            background: url(../img/sub-ministries-bg.png) no-repeat;
+            &.mask {
+                background-position: 0 -60px;
+            }
+            &.cloud {
+                background-position: 0 -31px;
+            }
+            &.slate {
+                background-position: 0 -180px;
+            }
+            &.monitor {
+                background-position: 0 -150px;
+            }
+            &.tune {
+                background-position: 0 0;
+            }
+            &.mic {
+                background-position: 0 -90px;
+            }
+            &.user {
+                background-position: 0 -120px;
             }
         }
     }
@@ -211,60 +228,67 @@
             }
         }
     }
+    .menu ul.first li .navmenu li {
+        padding-left: 27px;
+        line-height: 20px;
+        padding: 0px 0 4px 27px;
+        margin: 5px 0;
+    }
 }
 
-@media only screen and (max-width: 990px){
-    #footer-bottom{
+@media only screen and (max-width: 990px) {
+    #footer-bottom {
         display: none;
     }
 }
 
-@media only screen and (max-width: 900px){
-    
+@media only screen and (max-width: 900px) {
     .rock-menu #mobile-button {
-            display:inline-block;
-        }
+        display: inline-block;
+    }
     .rock-menu #responsive-menu-button {
         color: #fff;
         display: inline-block;
     }
-    #rock-menu ul li:nth-child(2), #rock-menu ul li:nth-child(3), #rock-menu ul li:nth-child(6), #rock-menu ul li:nth-child(7) {
-        display:none;
+    #rock-menu ul li:nth-child(2),
+    #rock-menu ul li:nth-child(3),
+    #rock-menu ul li:nth-child(6),
+    #rock-menu ul li:nth-child(7) {
+        display: none;
     }
 }
 
-@media only screen and (min-width: 670px){
-    .rock-menu .socialFooter{
-        display:none;
+@media only screen and (min-width: 670px) {
+    .rock-menu .socialFooter {
+        display: none;
     }
 }
 
-@media only screen and (max-width: 670px){
+@media only screen and (max-width: 670px) {
     .rock-menu #search {
         display: none
     }
-    .rock-menu #footer{
-        display:none;
+    .rock-menu #footer {
+        display: none;
     }
-    .rock-menu .socialFooter{
-        display:block;
+    .rock-menu .socialFooter {
+        display: block;
     }
 }
 
 @media only screen and (max-width:476px) {
-    .rock-menu .menu ul li{
-        font-size:11px;
-        padding:0 5px;
+    .rock-menu .menu ul li {
+        font-size: 11px;
+        padding: 0 5px;
     }
-    .rock-menu .menu-container{
-         width: 278px;
+    .rock-menu .menu-container {
+        width: 278px;
     }
-
     #rock-menu {
-        display:none;
+        display: none;
     }
     .rock-menu #mobile-button {
-        display:inline-block;
+        display: inline-block;
     }
     .rock-menu #responsive-menu-button {
         color: #fff;
