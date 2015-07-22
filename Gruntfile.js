@@ -11,7 +11,7 @@ module.exports = function(grunt) {
 
         concat: {
             main: {
-                src: ['src/js/main.js'],
+                src: ['src/js/plugins.js', 'src/js/main.js'],
                 dest: 'build/assets/js/global.js'
             }
         },
@@ -66,7 +66,8 @@ module.exports = function(grunt) {
                 options: {
                     livereload: true
                 },
-                files: ['**/*.jade']
+                files: ['**/*.jade'],
+                tasks: ['jade']
             }
         },
 
@@ -88,16 +89,13 @@ module.exports = function(grunt) {
             options: {
                 map: true, // inline sourcemaps
                 processors: [
+                    require('precss'),
                     require('postcss-assets')({
                       relativeTo: 'assets/css'
                     }),
-                    require('postcss-import').postcss, //import all css inline together
                     require('autoprefixer-core').postcss, //autoprefixer
                     require('cssgrace').postcss, //add fallbacks
-                    require('postcss-nested').postcss, //parse nested css like sass
-                    require('postcss-mixins').postcss, //add in mixins
                     require('postcss-focus').postcss, //auto :focus,:hover styles
-                    require('postcss-simple-vars').postcss, //variable like css
                     require('csswring').postcss //minify
                 ]
             },

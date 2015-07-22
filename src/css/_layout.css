@@ -1,11 +1,13 @@
 body{
 	background: url('../img/heroes-background.jpg') no-repeat;
 	background-size: cover;
+	background-repeat: repeat-y;
 }
 
 .item{
-	/*background: url('../img/hero-placeholder.jpg') no-repeat;	*/
 	border: 2px solid #000;
+	max-width: 300px;
+	margin: auto;
 
 	&--header{
 		background-color: #000;
@@ -30,9 +32,12 @@ body{
 
 	&--content{
 		background-color: #999;
-		height:200px;
 		background: url('../img/hero-placeholder-contentonly.jpg') no-repeat;
 		background-size: cover;
+
+		img{
+			max-height: 400px;
+		}
 	}
 }
 

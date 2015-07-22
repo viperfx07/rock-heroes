@@ -6,6 +6,7 @@ html(lang='en')
 		title Heroes
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
+		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css')
 		link(rel='stylesheet', href='assets/css/main.css')
 		//-script(src='js/vendor/modernizr-2.7.1.min.js')
 	body
@@ -15,7 +16,7 @@ html(lang='en')
 			| Please <a href="http://browsehappy.com/">upgrade your browser</a>
 			| to improve your experience.
 		<![endif]-->
-		
+		include ./partials/rockmenu		
 		.container-fluid
 			.row
 				.col-xs-12
@@ -26,6 +27,7 @@ html(lang='en')
 					.item
 						.item--header
 						.item--content
+							img.img-responsive(src="http://placehold.it/300x400")
 				-}
 			
 
