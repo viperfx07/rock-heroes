@@ -85,6 +85,16 @@ module.exports = function(grunt) {
             }
         },
 
+        connect:{
+            all:{
+                options:{
+                    port: 9999,
+                    hostname: "0.0.0.0",
+                    keepalive: true
+                }
+            }
+        },
+
         postcss: {
             options: {
                 map: true, // inline sourcemaps
@@ -94,7 +104,6 @@ module.exports = function(grunt) {
                       relativeTo: 'assets/css'
                     }),
                     require('autoprefixer-core').postcss, //autoprefixer
-                    require('cssgrace').postcss, //add fallbacks
                     require('postcss-focus').postcss, //auto :focus,:hover styles
                     require('csswring').postcss //minify
                 ]
@@ -131,5 +140,6 @@ module.exports = function(grunt) {
     grunt.registerTask('js', ['concat', 'uglify']);
     grunt.registerTask('img', ['imagemin']);
     grunt.registerTask('default', ['concat', 'uglify', 'imagemin', 'jade', 'postcss', 'watch']);
+    grunt.registerTask('server', ['connect']);
     grunt.registerTask('me', 'concurrent:first');
 };

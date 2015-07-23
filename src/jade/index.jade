@@ -6,7 +6,7 @@ html(lang='en')
 		title Heroes
 		meta(name='description', content='')
 		meta(name='viewport', content='width=device-width, initial-scale=1')
-		link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css')
+		link(rel='stylesheet', href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css')
 		link(rel='stylesheet', href='assets/css/main.css')
 		//-script(src='js/vendor/modernizr-2.7.1.min.js')
 	body
@@ -24,18 +24,21 @@ html(lang='en')
 			.row
 				- for(var i=0; i<14; i++){
 				.col-xs-12.col-sm-4.col-lg-1
-					.item
-						.item--header
-						.item--content
-							img.img-responsive(src="http://placehold.it/300x400")
+					a(href="#")
+						.item
+							.item--header
+							.item--content
+								- if(i%2 == 0)
+									img.img-responsive(src="http://placehold.it/346x356")
+								- else
+									img.img-responsive(src="assets/img/hero-placeholder-contentonly.jpg")
 				-}
 			
 
-								
+		script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')				
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js')
 		script window.jQuery || document.write('<script src="assets/js/vendor/jquery-1.11.0.min.js"><\/script>')
-		//-script(src='js/plugins.js')
-		script(src='assets/js/global.js')
+		script(src='assets/js/global.min.js')
 		//- Google Analytics: change UA-XXXXX-X to be your site's ID.
 		//-
 			script
