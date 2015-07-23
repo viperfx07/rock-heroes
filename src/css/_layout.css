@@ -2,6 +2,7 @@ body{
 	background: url('../img/heroes-background.jpg') no-repeat;
 	background-size: cover;
 	background-repeat: repeat-y;
+	overflow-x: hidden;
 }
 
 
