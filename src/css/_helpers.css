@@ -1,4 +1,4 @@
-@keyframes glowHeader{
+@keyframes glowHeaderRed{
   0%{
     background: #d00;
     background: radial-gradient(14px at center,white,#d00,#d00);
@@ -19,6 +19,28 @@
   }
 }
 
+@keyframes glowHeaderGreen{
+  0%{
+    background: #0d0;
+    background: radial-gradient(14px at center,white,#0d0,#0d0);
+    box-shadow: 0 0 7px rgba(0,255,0,0.8);
+    transform: scale(1);
+  }
+  50%{
+    background: #0f0;
+    background: radial-gradient(14px at center,white,#0f0,#0f0);
+     box-shadow: 0 0 14px rgba(0,255,0,0.8);
+     transform: scale(1.1);
+  }
+  100%{
+    background: #0d0;
+    background: radial-gradient(14px at center,white,#0d0,#0d0);
+    box-shadow: 0 0 7px rgba(0,255,0,0.8);
+    transform: scale(1);
+  }
+}
+
+
 .row{
 	&.no-gutters {
   		margin-right: 0;
@@ -31,16 +53,16 @@
   	}
 }
 
-//- Components
+/*- Components*/
 
-// The splitted image
-//
-//  -----------------------------
-//  |				    |		|
-//  |					---------
-//  |					|		|
-//  -----------------------------
+/* The splitted image
 
+  -----------------------------
+  |				    |		|
+  |					---------
+  |					|		|
+  -----------------------------
+*/
 
 .v-components{
 	&.splitted-image{

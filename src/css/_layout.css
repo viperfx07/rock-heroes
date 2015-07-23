@@ -27,7 +27,13 @@ body{
 			left: 50%;
 			margin-left: -10px;
 			margin-top: -10px;
-			animation: glowHeader infinite 1.5s;
+			animation: glowHeaderRed infinite 1.5s;
+		}
+
+		&.open{
+			&:before{
+				animation-name: glowHeaderGreen;
+			}
 		}
 	}
 
