@@ -25,13 +25,16 @@ html(lang='en')
 				- for(var i=0; i<14; i++){
 				.col-xs-12.col-sm-4.col-lg-1
 					a(href="#")
-						.item
+						- if(i % 2 == 0)
+							- itemClass = "open"
+							- sampleImage = "http://placehold.it/346x356"
+						- else
+							- itemClass = ""
+							- sampleImage = "assets/img/hero-placeholder-contentonly.jpg"
+						.item(class = itemClass)
 							.item--header
 							.item--content
-								- if(i%2 == 0)
-									img.img-responsive(src="http://placehold.it/346x356")
-								- else
-									img.img-responsive(src="assets/img/hero-placeholder-contentonly.jpg")
+								img.img-responsive(src=sampleImage)
 				-}
 			
 
