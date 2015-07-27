@@ -3,10 +3,13 @@ body {
     background-size: cover;
     background-repeat: repeat-y;
     overflow-x: hidden;
+    counter-reset: item;
 }
 .item {
+    counter-increment: item;
     border: 2px solid #000;
     max-width: 300px;
+    position: relative;
     margin: auto;
     &--header {
         background-color: #000;
@@ -33,6 +36,7 @@ body {
             }
         }
     }
+
     &--content {
         background-color: #999;
         background: url('../img/hero-placeholder-contentonly.jpg') no-repeat;
@@ -41,20 +45,20 @@ body {
         img {
             max-height: 400px;
         }
-        .item:not(.open) & {
-            &:after {
-                content: 'Coming soon !!';
-                position: absolute;
-                left: 0;
-                top: 50%;
-                right: 0;
-                text-align: center;
-                background-color: rgba(0, 0, 0, 0.5);
-                color: white;
-                display: inline-block;
-                transform: translateY(-50%);
-                font-size: 1.5em;
-            }
+    }
+
+    &:not(.open) {
+        &:after {
+            content: 'Coming soon (' counter(item) '/14)';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            right: 0;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: inline-block;
+            font-size: 1.1em;
         }
     }
 }
@@ -69,6 +73,7 @@ body {
     max-width: 100%;
     display: block;
     margin: 30px auto;
+    margin-bottom: 0;
 }
 .row {
     padding: 15px;

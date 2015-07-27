@@ -315,7 +315,6 @@
   };
 
 })( jQuery );
-
 $(document).ready(function() {
     $(".nav").mouseover(function() {
         $(this).find('div.navmenu').css('visibility', 'visible');
