@@ -1,7 +1,8 @@
 body {
     background: url('../img/heroes-background.jpg') no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
     background-size: cover;
-    background-repeat: repeat-y;
     background-color: #f3f3f3;
     overflow-x: hidden;
     counter-reset: item;
