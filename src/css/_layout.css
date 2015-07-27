@@ -2,6 +2,7 @@ body {
     background: url('../img/heroes-background.jpg') no-repeat;
     background-size: cover;
     background-repeat: repeat-y;
+    background-color: #f3f3f3;
     overflow-x: hidden;
     counter-reset: item;
 }
@@ -49,7 +50,7 @@ body {
 
     &:not(.open) {
         &:after {
-            content: 'Coming soon (' counter(item) '/14)';
+            content: 'Coming soon\A(' counter(item) '/14)';
             position: absolute;
             left: 0;
             top: 50%;
@@ -59,6 +60,7 @@ body {
             color: white;
             display: inline-block;
             font-size: 1.1em;
+            white-space: pre;
         }
     }
 }
