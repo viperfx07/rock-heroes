@@ -37,13 +37,12 @@ body {
             left: 50%;
             margin-left: -10px;
             margin-top: -10px;
-            animation: glowHeaderRed infinite 1.5s;
         }
         .item.open & {
             &:before {
                 background: #0f0;
                 background: radial-gradient(14px at center, white, #0f0, #0f0);
-                animation-name: glowHeaderGreen;
+                box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             }
         }
     }
