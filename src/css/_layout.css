@@ -41,6 +41,8 @@ body {
         }
         .item.open & {
             &:before {
+                background: #0f0;
+                background: radial-gradient(14px at center, white, #0f0, #0f0);
                 animation-name: glowHeaderGreen;
             }
         }

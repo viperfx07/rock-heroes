@@ -3,3 +3,13 @@
 		max-width: 600px;	
 	}
 }
+
+@media (max-width: 640px){
+	.item {
+		&--header, &--header.open {
+			&:before{
+				animation-name: none;
+			}
+		}
+	}
+}

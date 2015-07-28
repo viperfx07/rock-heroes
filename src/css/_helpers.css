@@ -29,8 +29,8 @@
   50%{
     background: #0f0;
     background: radial-gradient(14px at center,white,#0f0,#0f0);
-     box-shadow: 0 0 14px rgba(0,255,0,0.8);
-     transform: scale(1.1);
+    box-shadow: 0 0 14px rgba(0,255,0,0.8);
+    transform: scale(1.1);
   }
   100%{
     background: #0d0;
