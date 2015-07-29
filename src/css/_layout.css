@@ -12,15 +12,16 @@ body {
     background-size: cover;
     background-color: #f3f3f3;
     overflow-x: hidden;
-    counter-reset: item;
+    /*counter-reset: item;*/
 }
 .item {
-    counter-increment: item;
-    border: 2px solid #000;
+    /*counter-increment: item;*/
+    border: 1px solid #000;
     max-width: 300px;
     position: relative;
     margin: auto;
-    &--header {
+    box-shadow: 0 0 10px #000;
+    /*&--header {
         background-color: #000;
         height: 30px;
         position: relative;
@@ -45,7 +46,7 @@ body {
                 box-shadow: 0 0 20px rgba(0, 255, 0, 0.8);
             }
         }
-    }
+    }*/
 
     &--content {
         background-color: #999;
@@ -55,11 +56,21 @@ body {
         img {
             max-height: 400px;
         }
+
+        &--overlay{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 5%;
+        }
+
     }
 
     &:not(.open) {
         &:after {
-            content: 'Coming soon\A(' counter(item) '/14)';
             position: absolute;
             left: 0;
             top: 50%;
@@ -72,6 +83,22 @@ body {
             white-space: pre;
         }
     }
+
+    .episode{
+        &--number{
+            font-style: italic;
+            font-size: 1em;
+        }
+        &--title{
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        &--date{
+            font-size: 0.8em;
+        }
+    }
+                                   
+                                    
 }
 .ar-wrapper {
     height: 0;

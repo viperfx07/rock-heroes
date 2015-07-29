@@ -10,6 +10,7 @@ html(lang='en')
 		link(rel='stylesheet', href='assets/css/main.css')
 		//-script(src='js/vendor/modernizr-2.7.1.min.js')
 	body
+		- var heroes=[{name: 'Noah', date: '26 July 2015'},{name: 'Abraham', date: '2 August 2015'},{name: 'David', date: '9 August 2015'},{name: 'Esther', date: '16 August 2015'},{name: 'Joseph', date: '13 September 2015'},{name: 'Joshua', date: '20 September 2015'},{name: 'Elijah', date: '4 October 2015'},{name: 'Moses', date: '11 October 2015'},{name: 'Daniel', date: '18 October 2015'},{name: 'Job', date: '1 November 2015'},{name: 'Ruth', date: '22 November 2015'},{name: 'Jonah', date: '29 November 2015'},{name: 'Gideon', date: '13 December 2015'},{name: 'Jesus', date: '20 December 2015'}]
 		<!--[if lt IE 8]>
 		p.browsehappy
 			| You are using an <strong>outdated</strong> browser.
@@ -21,9 +22,9 @@ html(lang='en')
 			.row
 				.col-xs-12
 					img.logo(src="assets/img/heroes-title.png", alt="Heroes")
-			.row
+			.row.isotope--container
 				- for(var i=0; i<14; i++){
-				.col-xs-12.col-sm-4.col-lg-1
+				.col-xs-12.col-sm-4.col-lg-1.isotope--item
 					a(href="#")
 						- if(i % 2 == 0)
 							- itemClass = "open"
@@ -32,16 +33,20 @@ html(lang='en')
 							- itemClass = ""
 							- sampleImage = "assets/img/hero-placeholder-contentonly.jpg"
 						.item(class = itemClass)
-							.item--header
 							.item--content
 								img.img-responsive(src=sampleImage)
+								.item--content--overlay
+									.episode--number Ep.
+										span= (i+1)
+									.episode--title= heroes[i].name
+									.episode--date= heroes[i].date
 				-}
 			
 
 		script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 		script window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
-		script(src='assets/js/global.min.js')
+		script(src='assets/js/global.js')
 		//- Google Analytics: change UA-XXXXX-X to be your site's ID.
 		//-
 			script
