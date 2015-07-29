@@ -40,7 +40,7 @@ module.exports = function(grunt) {
 
         concurrent: {
             first: {
-                tasks: ['css', 'js', 'jade']
+                tasks: ['css', 'js', 'jade', 'server', 'watch']
             }
         },
 

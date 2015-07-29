@@ -22,15 +22,17 @@ html(lang='en')
 			.row
 				.col-xs-12
 					img.logo(src="assets/img/heroes-title.png", alt="Heroes")
-			.row.isotope--container
+			.row.heroes-container
 				- for(var i=0; i<14; i++){
-				.col-xs-12.col-sm-4.col-lg-1.isotope--item
+				- if (i<4) 
+					- sortClass = 'open'
+				- else
+					- sortClass = ''
+				.col-xs-12.col-sm-4.col-lg-1.item--container(class=sortClass)
 					a(href="#")
 						- if(i % 2 == 0)
-							- itemClass = "open"
 							- sampleImage = "http://placehold.it/346x356"
 						- else
-							- itemClass = ""
 							- sampleImage = "assets/img/hero-placeholder-contentonly.jpg"
 						.item(class = itemClass)
 							.item--content
@@ -41,8 +43,6 @@ html(lang='en')
 									.episode--title= heroes[i].name
 									.episode--date= heroes[i].date
 				-}
-			
-
 		script(src='//cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js')
 		script(src='//ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 		script window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
