@@ -4,6 +4,7 @@ html {
 }
 
 body {
+    font-family: MuseoSans500, 'Helvetica Neue', Helvetica, Arial, sans-serif;
     height: 100%;
     overflow-y: scroll;
     background: url('../img/heroes-background.jpg') no-repeat;
@@ -108,11 +109,94 @@ body {
     }
 }
 .logo {
-    max-width: 100%;
-    display: block;
+    width: 100%;
+    max-width: 400px;
     margin: 30px auto;
     margin-bottom: 0;
+
+    &--container{
+        text-align: center;
+    }
 }
 .row {
     padding: 15px;
+}
+
+/* POST */
+.post{
+    *{
+        color: #fff;
+    }
+
+    a:hover, a:focus{
+        color: #fff;
+    }
+
+    &.container{
+        background: rgba(0, 0, 0, 0.6);
+        max-width: 600px;
+        padding: 1.5em;
+        margin-bottom: 2em;
+        border-radius: 5px;
+    }
+
+    &--header{
+        text-align: center;
+        .post--title{
+            margin-bottom: 0;
+        }
+        &--image{
+            max-width: 150px;
+        }
+        padding-top: 1em;
+        padding-bottom: 1em;
+        border-bottom: 1px solid #fff;
+    }
+
+    &--meta{
+        .author{
+            color: #ccc;
+            font-style: italic;
+        }
+    }
+
+    &--utils{
+        &--audio{
+            .fa-volume-up{
+                padding-right: 5px;
+            }
+        }
+
+        &--social{
+            padding-top: 0.5em;
+            a{
+                padding-left: 0.5em;
+                padding-right: 0.5em;
+                span{
+                    border-radius: 50%;
+                    border: 2px solid #fff;
+                    transition: all 0.6s;
+                }
+
+                &:hover, .touch &{
+                    .social--facebook, .social--like{
+                        background-color: #3B579D;
+                    }
+                    .social--twitter{
+                        background-color: #2CAAE1;
+                    }
+                    .social--google{
+                        background-color: #DD4B39;
+                    }
+                }
+            }
+        }
+    }
+
+    &--footer{
+        .post--utils{
+            float: right;
+            text-align: center;
+        }
+    }
 }

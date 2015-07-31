@@ -1,5 +1,10 @@
-@media (min-width: 640px) {
-	.logo{
-		max-width: 600px;	
+@media (max-width: 400px){
+	.post{
+		&--footer{
+			.post--utils{
+	            float: none;
+	            text-align: center;
+	        }			
+		}
 	}
 }

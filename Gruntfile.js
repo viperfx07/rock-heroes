@@ -79,9 +79,13 @@ module.exports = function(grunt) {
                         debug: false
                     }
                 },
-                files: {
-                    "build/index.html": ["src/jade/index.jade"]
-                }
+                files: [{
+                    expand: true,
+                    ext: '.html',
+                    cwd: "src/jade",
+                    src: "*.jade",
+                    dest: "build/"
+                }]
             }
         },
 
